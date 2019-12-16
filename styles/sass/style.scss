@@ -1,0 +1,472 @@
+@import 'setup';
+@import 'variables';
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+p{
+    line-height: 1.5;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 400;
+}
+
+.header{
+    height: 200vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: top;
+    overflow: auto;
+    background-image: url(../assets/nacho-unsplash-crop.jpg);
+
+    header{
+        height: 90vh;
+    }
+
+    &__text{
+        border: 6px solid white;
+        // width: 125px;
+        // height: 200px;
+        width: 300px;
+        height: 350px;
+        // margin: 20vh auto;
+        margin: 10vh auto;
+        padding: 15px;        
+        display: flex;
+        align-items: center;
+        
+
+        h1{
+            // font-size: 3rem;
+            font-size: 6rem;
+            color: white;
+            text-align: center;
+            text-shadow: $text-shadow-color;
+            font-family: 'Abril Fatface', cursive;
+        }
+    }
+}
+
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.toggle{
+    width: 40px;
+    height: 4px;
+    margin: 8px 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow:
+    0.07em 0 navy,
+    0 0.07em navy,
+    -0.07em 0 navy,
+    0 -0.07em navy;
+
+    &:first-of-type{
+        margin-top: 5px;
+    }
+}
+
+.header__navButton{
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 10;
+    height: 65px;
+    cursor: pointer;
+    padding: 15px;
+    transition-duration: 0.5s;
+    border: none;
+    
+
+    &:hover .toggle,
+    &:focus .toggle{
+        background: rgb(231, 231, 231);
+    }
+}
+
+.main-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    bottom: 0;
+    flex-direction: column;
+    display: none;
+    padding: 0;
+}
+
+.display{
+    display: flex;
+}
+
+.main-nav li{
+    display: block;
+    margin: 30px 0;
+
+    i{
+        font-size: 2rem;
+        padding-bottom: 10px;
+    }
+
+    a{  display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        text-shadow: $text-shadow-color;
+        font-size: 1.75rem;
+        font-family: "Raleway", sans-serif;
+        transition: 0.3s;
+
+        &:hover,
+        &:focus{
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+h2{
+    // font-family: 'Old Standard TT', serif;
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkgray;
+    margin:0;
+}
+
+button{
+    border: none;
+    background: none;
+    cursor: pointer;
+    i{
+        font-size: 4rem;
+        color: white;
+        text-shadow: $text-shadow-color;
+    }
+}
+.arrow {
+    text-align: center;
+    margin: 3% 0;
+}
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+    }
+    40% {
+    transform: translateY(-30px);
+    }
+    60% {
+    transform: translateY(-15px);
+    }
+}
+
+@media (max-width:980px){
+    .header__picture{
+        height: 180px;
+        width: 500px;
+        margin: 0 auto;
+
+        .mountain{
+            right: 50px;
+        }
+    }
+
+    .header__navButton{
+        padding: 5px 0;
+    }
+}
+
+@media (max-width:710px){
+  
+}
+
+////ABOUT ME////
+
+//Images
+
+.aboutMe img{
+    border: 8px solid white;
+    border-bottom-width: 40px;
+    border-top-width: 16px;
+    box-shadow: 1px 1px 2px rgba(22, 20, 36, 0.2), 0 0 25px rgba(22, 20, 36, 0.2), 0 0 5px rgba(22, 20, 36, 0.2);
+    margin: 0 auto;
+    display: block;
+    transition: 0.3s;
+    position: absolute;
+}
+.profile{
+    width: 125px;
+    left: 2%;
+    transform: rotate(-10deg);
+    z-index: 10;
+    top: 40%;
+
+    &:hover{
+        transform: rotate(-15deg);
+    }
+}
+
+.sitting {
+    top: 25%;
+    width: 175px;
+    z-index: 5;
+    left: 5%;
+    transform: rotate(10deg);
+    &:hover{
+        transform: rotate(5deg);
+    }
+}
+
+//Text
+
+
+.aboutMe{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 95vh;
+    position: relative;
+
+    &>div{
+        width: 70%;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    &__text{
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    &__text--name{
+        border-bottom: 2px solid darkgray;
+    }
+
+    span{
+        color: rgb(139, 139, 139);
+    }
+}
+
+////MOCK UP/////
+
+.projects{
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 75px 0;
+
+    &>div{
+        display: flex;
+        padding: 50px 0;
+
+        &>div{
+            width: calc(100% - 250px);
+        }
+
+        img{
+            align-self: center;
+        }
+    }
+
+    h3{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2.5rem;
+        color: navy;
+        margin: 0;
+    }
+
+    a{
+        color: navy;
+        text-decoration: none;
+        padding: 5px 20px;
+        font-size: 1.75rem;
+        border: 4px solid navy;
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+        border-radius: 20px;
+        transition: 0.4s;
+        background: rgb(253, 211, 217);
+        
+        &:hover,
+        &:focus{
+            background: navy;
+            color: rgb(253, 211, 217);
+        }
+    }
+
+    span{
+        border-bottom: 2px solid darkgray;
+        color: rgb(138, 138, 138);
+    }
+
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li{
+            display: inline-block;
+            padding: 5px 15px;
+            background: rgb(218, 218, 218);
+            color: navy;
+            font-size: 1.75rem;
+            font-family: "Arial", sans-serif;
+            margin-bottom: 25px;
+        }
+    }
+
+    img{
+        height: 250px;
+    }
+}
+
+.projects__firstCard{
+    display: flex;
+    text-align: right;
+
+    &--image{
+        width: 500px;
+        margin-left: 25px;
+    }
+
+    li{
+        margin-left: 15px;
+    }
+}
+
+.projects__fourthCard{
+    display: flex;
+
+    img{
+        width: 450px;
+        height: 225px;
+        border-radius: 32px;
+        border: 2px solid gray;
+        margin-right: 15px;
+    }
+
+    
+    li{
+        margin-right: 15px;
+    }
+}
+
+.projects__thirdCard{
+    text-align: right;
+
+    img{
+        margin-left: 15px;
+    }
+
+    li{
+        margin-left: 15px;
+    }
+}
+
+.projects__secondCard{
+
+    img{
+        margin-right: 15px;
+    }
+
+    li{
+        margin-right: 15px;
+    }
+}
+
+.link{
+    margin-right: 20px;
+}
+
+///SKILLS
+
+.skills {
+    background: rgb(253, 221, 226);
+    padding: 30px 0;
+
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    h2{
+        padding: 20px 0;
+        color: darkgray;
+        font-weight: bold;
+        font-family: "Raleway", sans-serif;
+
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 380px;
+        padding: 20px 0;
+        width: 100%;
+        margin: 0
+    }
+
+    li{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:last-of-type p{
+            margin-top: 9px;
+        }
+    }
+
+    i{
+        font-size: 4rem;
+        color: navy;
+        transition: 0.4s;
+
+        &:hover,
+        &:focus{
+            color: gray;
+            transform: scale(1.1);
+        }
+    }
+
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+}
+////CONTACT
+
+.contact{
+    background: lightsteelblue;
+    h2{
+        color: navy;
+        font-family: "Raleway", sans-serif;
+    }
+
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
