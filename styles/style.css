@@ -663,7 +663,8 @@ button i {
 
 .skills {
   background: #fddde2;
-  padding: 30px 0;
+  padding-bottom: 30px;
+  padding-top: 55px;
 }
 
 .skills .wrapper {
@@ -687,7 +688,7 @@ button i {
 
 .skills h2 {
   padding: 20px 0;
-  color: darkgray;
+  color: #ee5965;
   font-weight: bold;
   font-family: "Raleway", sans-serif;
 }
@@ -727,13 +728,25 @@ button i {
 }
 
 .skills li:hover i,
-.skills li:focus i {
+.skills li:focus i,
+.skills li:hover svg,
+.skills li:focus svg {
   color: gray;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.skills i {
+.skills li:hover .firebase,
+.skills li:focus .firebase {
+  fill: gray;
+}
+
+.skills li:hover p,
+.skills li:focus p {
+  color: #8b8b8b;
+}
+
+.skills i, .skills svg {
   font-size: 4rem;
   color: navy;
   -webkit-transition: 0.4s;
@@ -742,6 +755,8 @@ button i {
 
 .skills p {
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .contact {
@@ -751,8 +766,30 @@ button i {
 .contact h2 {
   color: navy;
   font-family: "Raleway", sans-serif;
+  text-align: center;
 }
 
-.contact p {
+.contact p,
+.contact label {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
 }

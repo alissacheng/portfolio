@@ -122,7 +122,7 @@
             </div>
         </div>
     </section>
-    <section class="skills">
+    <section class="skills" id="skills">
         <div class="wrapper">
             <h2>My Toolbox</h2>
             <ul>
@@ -144,7 +144,7 @@
                 </li>
                 <li>
                     <i class="devicon-jquery-plain" aria-hidden=""></i>
-                    <p>Jquery</p>
+                    <p>jQuery</p>
                 </li>
                 <li>
                     <i class="fab fa-github" aria-hidden=""></i>
@@ -159,7 +159,10 @@
                     <p>Git</p>
                 </li>
                 <li>
-                    <i class="fas fa-database"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="40" height="40"
+                    viewBox="0 0 226 226"
+                    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,226v-226h226v226z" fill="none"></path><g><path d="M37.66667,174.20833l71.72675,-134.48883c1.51138,-2.83442 5.59821,-2.78263 7.03425,0.09417l24.82233,49.64467z" fill="#000080" class="firebase"></path><path d="M37.66667,174.17067l26.11242,-161.02029c0.68271,-4.21396 6.34213,-5.12737 8.31962,-1.34187l50.31796,96.4455z" fill="#000080" class="firebase"></path><path d="M37.70433,174.14242l0.94167,-0.73921l82.53237,-67.52221l-23.278,-44.61617z" fill="#ffffff" fill-opacity="0.5"></path><path d="M37.66667,174.20833l125.55242,-121.06537c2.63196,-2.53779 7.02483,-1.04054 7.56158,2.57546l17.55267,118.48992l-70.625,41.16496c-2.86738,1.61025 -6.36567,1.61025 -9.23304,0z" fill="#000080" class="firebase"></path></g></g></svg>
                     <p>Firebase</p>
                 </li>
                 <li>
@@ -178,33 +181,25 @@
         </div>
     </section>
     <section class="contact">
-        <div>
-            <h2>Connect With Me</h2>
-            <p>Thanks for stopping by! </p>
-            <aside class="social">
-    
-            </aside>
+        <h2>Connect With Me</h2>
+        <div class="wrapper">
+            <div>
+                <p>Thanks for stopping by! If you are looking to collborate on a project or would like more information about me, please don't hesitate to send a message.</p>
+                <aside class="social">
+        
+                </aside>
+            </div>
+            <form action="https://formspree.io/alissabc@hotmail.com" method="post">
+                <h3>Send a message here:</h3>
+                <label for="name">Name:</label>
+                <input type="text" name="name">
+                <label for="_replyto">Email:</label>
+                <input type="email" name="_replyto">
+                <label for="message">Message:</label>
+                <textarea name="message"></textarea>
+                <input type="submit" value="Send">
+            </form>
         </div>
-        <form method="post" name="contact_form"action="contact-form-handler.php">
-            <label>Name:</label>
-            <input type="text" name="name">
-
-            <label>Email:</label>
-            <input type="text" name="email">
-
-            <label>Message:</label>
-            <textarea name="message"></textarea>
-            <input type="submit" value="Submit">
-        </form>	
-        <form action="https://formspree.io/alissabc@hotmail.com" method="post">
-            <label for="name">Name:</label>
-            <input type="text" name="name">
-            <label for="email">Email:</label>
-            <input type="email" name="_replyto">
-            <label>Message:</label>
-            <textarea name="message"></textarea>
-            <input type="submit" value="Send">
-        </form>
     </section>
     <footer>
         <p>Alissa Cheng</p>

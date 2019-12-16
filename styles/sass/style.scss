@@ -400,7 +400,8 @@ button{
 
 .skills {
     background: rgb(253, 221, 226);
-    padding: 30px 0;
+    padding-bottom: 30px;
+    padding-top: 55px;
 
     .wrapper{
         display: flex;
@@ -414,7 +415,7 @@ button{
 
     h2{
         padding: 20px 0;
-        color: darkgray;
+        color: rgb(238, 89, 101);
         font-weight: bold;
         font-family: "Raleway", sans-serif;
 
@@ -440,13 +441,25 @@ button{
         }
 
         &:hover i,
-        &:focus i{
+        &:focus i,
+        &:hover svg,
+        &:focus svg{
             color: gray;
             transform: scale(1.1);
         }
-    }
 
-    i{
+        &:hover .firebase,
+        &:focus .firebase{
+            fill: gray;
+        }
+
+        &:hover p,
+        &:focus p{
+            color: rgb(139, 139, 139);
+        }
+    }
+    
+    i,svg{
         font-size: 4rem;
         color: navy;
         transition: 0.4s;
@@ -454,7 +467,7 @@ button{
 
     p{
         font-family: Arial, Helvetica, sans-serif;
-
+        transition: 0.4s;
     }
 }
 ////CONTACT
@@ -464,9 +477,24 @@ button{
     h2{
         color: navy;
         font-family: "Raleway", sans-serif;
+        text-align: center;
     }
 
-    p{
+    p,
+    label{
         font-family: Arial, Helvetica, sans-serif;
     }
+
+    .wrapper{
+        display: flex;
+        max-width: 1200px;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width:100%;
 }
