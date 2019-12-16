@@ -726,17 +726,18 @@ button i {
   margin-top: 9px;
 }
 
+.skills li:hover i,
+.skills li:focus i {
+  color: gray;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .skills i {
   font-size: 4rem;
   color: navy;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-}
-
-.skills i:hover, .skills i:focus {
-  color: gray;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .skills p {

@@ -438,18 +438,18 @@ button{
         &:last-of-type p{
             margin-top: 9px;
         }
+
+        &:hover i,
+        &:focus i{
+            color: gray;
+            transform: scale(1.1);
+        }
     }
 
     i{
         font-size: 4rem;
         color: navy;
         transition: 0.4s;
-
-        &:hover,
-        &:focus{
-            color: gray;
-            transform: scale(1.1);
-        }
     }
 
     p{
