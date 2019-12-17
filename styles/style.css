@@ -461,11 +461,11 @@ button i {
 
 .profile {
   width: 125px;
-  left: 2%;
+  left: 4%;
   -webkit-transform: rotate(-10deg);
           transform: rotate(-10deg);
   z-index: 10;
-  top: 40%;
+  top: 45%;
 }
 
 .profile:hover {
@@ -474,7 +474,7 @@ button i {
 }
 
 .sitting {
-  top: 25%;
+  top: calc(45% - 90px);
   width: 175px;
   z-index: 5;
   left: 5%;
@@ -790,6 +790,7 @@ button i {
   display: inline-block;
   font-size: 4.5rem;
   border-bottom: 5px solid rgba(233, 58, 81, 0.8);
+  margin-top: 0;
 }
 
 .contact p,
@@ -924,7 +925,7 @@ footer p {
 
 @media (max-width: 990px) {
   .main-nav {
-    background: rgba(2, 45, 64, 0.9);
+    background: rgba(4, 26, 39, 0.9);
   }
   .main-nav li i {
     font-size: 1.5rem;
@@ -1088,6 +1089,9 @@ footer p {
   .contact h3 {
     display: block;
     text-align: center;
+  }
+  .contact .wrapper {
+    width: 90%;
   }
   .contact .wrapper ul {
     -webkit-box-align: center;

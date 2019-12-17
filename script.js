@@ -27,7 +27,7 @@ $(function(){
     //slide in
     AOS.init();
     AOS.init({
-        disable:"mobile"
+        disable: "mobile"
     })
 });
 
