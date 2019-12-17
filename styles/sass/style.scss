@@ -1,9 +1,14 @@
 @import 'setup';
-@import 'variables';
+
+$text-shadow-color: 1px 1px 2px rgb(22, 20, 36), 0 0 10px rgb(22, 20, 36), 0 0 5px rgb(22, 20, 36);
 
 img {
     max-width: 100%;
     height: auto;
+}
+
+header, section{
+    overflow: hidden;
 }
 
 html{
@@ -17,13 +22,15 @@ p{
     font-weight: 400;
 }
 
+//HEADER//
+
 .header{
-    height: 200vh;
+    height: 190vh;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
     background-position: top;
-    overflow: auto;
+    overflow: hidden;
     background-image: url(../assets/nacho-unsplash-crop.jpg);
 
     header{
@@ -32,33 +39,27 @@ p{
 
     &__text{
         border: 6px solid white;
-        // width: 125px;
-        // height: 200px;
         width: 300px;
         height: 350px;
-        // margin: 20vh auto;
         margin: 10vh auto;
         padding: 15px;        
         display: flex;
         align-items: center;
-        
-
-        h1{
-            // font-size: 3rem;
-            font-size: 6rem;
-            color: white;
-            text-align: center;
-            text-shadow: $text-shadow-color;
-            font-family: 'Abril Fatface', cursive;
-        }
     }
 }
 
-
-input[type="checkbox"]{
-    display: none;
+//Website Title in Header
+h1{
+    font-size: 6rem;
+    color: white;
+    text-align: center;
+    text-shadow: $text-shadow-color;
+    font-family: 'Abril Fatface', cursive;
 }
 
+//Hamburger menu in button form
+
+//Style hamburger inside button
 .toggle{
     width: 40px;
     height: 4px;
@@ -76,6 +77,7 @@ input[type="checkbox"]{
     }
 }
 
+//style button
 .header__navButton{
     display: block;
     position: fixed;
@@ -95,6 +97,7 @@ input[type="checkbox"]{
     }
 }
 
+//Main nav
 .main-nav{
     position: fixed;
     top: 0;
@@ -104,6 +107,10 @@ input[type="checkbox"]{
     flex-direction: column;
     display: none;
     padding: 0;
+    background: rgba(4, 26, 39, 0.5);
+    height: 100vh;
+    margin: 0;
+    z-index: 15;
 }
 
 .display{
@@ -137,14 +144,7 @@ input[type="checkbox"]{
 }
 
 
-h2{
-    // font-family: 'Old Standard TT', serif;
-    font-size: 4rem;
-    font-family: Arial, Helvetica, sans-serif;
-    color: darkgray;
-    margin:0;
-}
-
+//Bouncing arrow in header to scroll to "About Me"
 button{
     border: none;
     background: none;
@@ -177,26 +177,6 @@ button{
     }
 }
 
-@media (max-width:980px){
-    .header__picture{
-        height: 180px;
-        width: 500px;
-        margin: 0 auto;
-
-        .mountain{
-            right: 50px;
-        }
-    }
-
-    .header__navButton{
-        padding: 5px 0;
-    }
-}
-
-@media (max-width:710px){
-  
-}
-
 ////ABOUT ME////
 
 //Images
@@ -206,8 +186,6 @@ button{
     border-bottom-width: 40px;
     border-top-width: 16px;
     box-shadow: 1px 1px 2px rgba(22, 20, 36, 0.2), 0 0 25px rgba(22, 20, 36, 0.2), 0 0 5px rgba(22, 20, 36, 0.2);
-    margin: 0 auto;
-    display: block;
     transition: 0.3s;
     position: absolute;
 }
@@ -235,8 +213,6 @@ button{
 }
 
 //Text
-
-
 .aboutMe{
     width: 80%;
     margin: 0 auto;
@@ -245,6 +221,14 @@ button{
     align-items: center;
     height: 95vh;
     position: relative;
+
+    //About Me Subheading
+    h2{
+        font-size: 4.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #949494;
+        margin:0;
+    }
 
     &>div{
         width: 70%;
@@ -261,7 +245,7 @@ button{
     }
 
     span{
-        color: rgb(139, 139, 139);
+        color: #737373;
     }
 }
 
@@ -272,10 +256,11 @@ button{
     max-width: 1200px;
     margin: 0 auto;
     padding: 75px 0;
+    overflow: hidden;
 
     &>div{
         display: flex;
-        padding: 50px 0;
+        padding: 70px 0;
 
         &>div{
             width: calc(100% - 250px);
@@ -293,6 +278,11 @@ button{
         margin: 0;
     }
 
+    p{
+        margin: 0;
+        margin-top: 20px;
+    }
+
     a{
         color: navy;
         text-decoration: none;
@@ -303,7 +293,9 @@ button{
         font-weight: bold;
         border-radius: 20px;
         transition: 0.4s;
+        display: inline-block;
         background: rgb(253, 211, 217);
+        margin-top: 19px;
         
         &:hover,
         &:focus{
@@ -314,7 +306,7 @@ button{
 
     span{
         border-bottom: 2px solid darkgray;
-        color: rgb(138, 138, 138);
+        color: #737373;
     }
 
     ul{
@@ -325,16 +317,26 @@ button{
         li{
             display: inline-block;
             padding: 5px 15px;
-            background: rgb(218, 218, 218);
-            color: navy;
+            border: 1px solid darkgray;
+            color: #E70D4B;
             font-size: 1.75rem;
             font-family: "Arial", sans-serif;
-            margin-bottom: 25px;
+            margin-top: 15px;
         }
     }
 
     img{
         height: 250px;
+        width: 400px;
+    }
+
+    h2{
+        font-family: "Abril Fatface", cursive;
+        margin-top: 50px;
+        color: rgb(65, 53, 90);
+        display: inline-block;
+        font-size: 4.5rem;
+        border-bottom: 5px solid rgba(233, 58, 81, 0.8);
     }
 }
 
@@ -342,8 +344,7 @@ button{
     display: flex;
     text-align: right;
 
-    &--image{
-        width: 500px;
+    img{
         margin-left: 25px;
     }
 
@@ -393,15 +394,15 @@ button{
 }
 
 .link{
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
-///SKILLS
+///SKILLS/////
 
 .skills {
-    background: rgb(253, 221, 226);
-    padding-bottom: 30px;
-    padding-top: 55px;
+    background: rgb(255, 232, 236);
+    padding: 50px 0;
+    overflow: hidden;
 
     .wrapper{
         display: flex;
@@ -415,20 +416,21 @@ button{
 
     h2{
         padding: 20px 0;
-        color: rgb(238, 89, 101);
+        color: #E70D4B;
         font-weight: bold;
         font-family: "Raleway", sans-serif;
-
+        margin: 30px 0;
+        font-size: 4.5rem;
     }
     ul{
         list-style: none;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        height: 380px;
-        padding: 20px 0;
+        height: 400px;
+        padding: 30px 0;
         width: 100%;
-        margin: 0
+        margin: 0;
     }
 
     li{
@@ -470,16 +472,20 @@ button{
         transition: 0.4s;
     }
 }
-////CONTACT
+////CONTACT////
 
 .contact{
-    background: lightsteelblue;
-    h2{
-        color: navy;
-        font-family: "Raleway", sans-serif;
-        text-align: center;
-    }
+    background: lightblue;
+    padding: 100px 0;
 
+    h2{
+        margin-left: 10%;
+        font-family: "Abril Fatface", cursive;
+        color: rgb(65, 53, 90);
+        display: inline-block;
+        font-size: 4.5rem;
+        border-bottom: 5px solid rgba(233, 58, 81, 0.8);
+    }
     p,
     label{
         font-family: Arial, Helvetica, sans-serif;
@@ -490,11 +496,315 @@ button{
         max-width: 1200px;
         width: 80%;
         margin: 0 auto;
+        justify-content: space-between;
+
+        &>div{
+            width: 80%;
+        }
     }
+
+    ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    li{
+        font-size: 3rem;
+        text-align: center;
+
+        p{
+            margin: 0;
+            margin-left: 15px;
+            color: black;
+        }
+    }
+
+    i{
+        color: rgb(65, 53, 90);
+        transition: 0.3s;
+    }
+
+    a{
+        text-decoration: none;
+        display: flex;
+        margin: 5px 0;
+        width: 160px;
+
+        &:hover i,
+        &:focus i{
+            color: rgb(233, 58, 81,);
+        }
+    }
+}
+
+h3{
+    font-family: "Abril Fatface", cursive;
+    color: rgb(65, 53, 90);
+    display: inline-block;
+    font-size: 3rem;
 }
 
 form{
     display: flex;
     flex-direction: column;
     width:100%;
+    padding-left: 50px;
+    font-size: 1.9rem;
+    justify-content: space-between;
+    
+    &>input,
+    &>textarea{
+        padding: 10px;
+        background: white;
+        font-family: "Raleway", sans-serif;
+        border: none;
+    }
+
+    input[type=submit]{
+        color:rgb(65, 53, 90);
+        cursor: pointer;
+        width: 150px;
+        align-self: center;
+        background: white;
+        border: 4px solid rgb(65, 53, 90);
+        border-radius: 25px;
+        font-family: "Raleway", sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: 0.4s;
+
+        &:hover,
+        &:focus{
+            background: rgb(65, 53, 90);
+            color: rgb(224, 199, 205);
+        }
+    }
+}
+
+textarea{
+    resize: none;
+    height: 50%;
+}
+
+footer p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: rgb(65, 53, 90);
+    font-weight: bold;
+}
+
+//Ipad
+@media (max-width: 990px){
+//HEADER//
+    //main nav icons
+    .main-nav {
+        background: rgba(2, 45, 64, 0.9);
+        li i{
+        font-size: 1.5rem;
+        }
+    }
+
+    //ABOUT ME//
+    
+    .aboutMe{
+        width: 80%;
+
+        &>div{
+            width: 100%;
+        }
+
+        img{
+            display: none;
+        }
+    }
+
+    .profile{
+        width: 100px;
+    }
+
+    .projects{
+        width: 90%;
+    }
+
+    .projects > div > div{
+        width: 100%;
+        text-align: left;
+    }
+
+    .projects__firstCard,
+    .projects__thirdCard{
+        flex-direction: column;
+        text-align: left;
+
+        &--image{
+            margin-top: 50px;
+            width: 400px;
+        }
+
+        & li:first-of-type{
+            margin-left: 0;
+        }
+
+        li{
+            margin-right: 15px;
+            margin-left: 0;
+        }
+    }
+
+    .projects__secondCard,
+    .projects__fourthCard{
+        flex-direction: column-reverse;
+
+        img{
+            margin-top: 50px;
+            width: 400px;
+        }
+    }
+
+    .projects__fourthCard img{
+        width: 500px;
+    }
+
+    ///Skills
+
+    .skills .wrapper{
+        width: 80%;
+    }
+
+    //Contact
+
+    .contact .wrapper{
+        flex-direction: column;
+
+        &>div{
+            width: 100%;
+        }
+
+        ul{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    
+    h3{
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    form{
+        margin-top: 25px;
+        height: 400px;
+        padding-left: 0;
+    }
+}
+
+//mobile
+@media (max-width:600px){
+//header
+
+    .header{
+        height: 230vh;
+
+        header{
+            height: 110vh;
+        }
+
+        &__text{
+            width: 175px;
+            height: 300px;
+            margin: 15vh auto;
+        }
+    }
+
+    h1{
+        font-size: 4rem;
+    }
+
+    //about me
+    .aboutMe{
+        width: 90%;
+        height: 115vh;
+
+        h2{
+            font-size: 4rem;
+        }
+
+        &__text{
+            padding: 15px;
+        }
+
+        p{
+            font-size: 1.8rem;
+        }
+    }
+
+    //Make margins smaller for live link
+    .link{
+        margin-right: 10px;
+    }
+
+    //Projects heading smaller font
+    .projects h2{
+        margin-top: 40px;
+    }
+
+    .projects img{
+        width: 315px;
+        height: 175px;
+    }
+
+    .projects__thirdCard img,
+    .projects__firstCard img{
+        margin-left: 0;
+    }
+
+    .projects__secondCard img{
+        margin-right: 0;
+    }
+
+    .projects__fourthCard img{
+        height: 125px;
+        width: 290px;
+        margin-right: 0;
+    }
+
+    .skills .wrapper{
+        width: 90%;
+
+        p{
+            font-size: 1.75rem;
+        }
+
+        ul{
+            height: 480px;
+        }
+    }
+    //contact
+
+    .contact{
+        a{
+            width: 100%;
+
+            p{
+                display: none;
+            }
+        }
+
+        h2{
+            font-size: 3.75rem;
+        }
+
+        h3{
+            display: block;
+            text-align: center;
+        }
+
+        .wrapper ul{
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
 }

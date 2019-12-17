@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Raleway:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Alissa Cheng</title>
 </head>
@@ -46,166 +47,190 @@
                 </button>
             </div>
         </header>
-        <section class="aboutMe" id="aboutMe">
-            <img src="assets/profile.jpg" alt="Alissa Cheng smiling" class="profile">
-            <img src="assets/Sitting Picture.jpg" class="sitting">
-            <div class="aboutMe__text">
-                <h2>About Me</h2>
-                <p>Hello, my name is <span class="aboutMe__text--name">Alissa</span>. I am a Front End Developer in Toronto. I am passionate about creating applications that are accessible and aim to improve people's lives.</p>
-                <!-- <p>Having worked in team environments extensively, I am excited to join a group of people that want to make a positive impact through web development. I love collaborating with others on projects, and I believe that good communication is key in order for a project to reach its full potential.
-                </p>  -->
-                <p>Programming requires a mix of problem solving and creativity that exhilerates my mind. Even though my favourite courses in school were math and economics, I have always been attached to the arts. In my spare time, I love to practice yoga and write fiction. Being able to find something that strikes the perfect balance between both worlds felt like coming home <span>♡</span>.</p>
+        <main>
+            <section class="aboutMe" id="aboutMe">
+                <img src="assets/profile.jpg" alt="Alissa Cheng smiling" class="profile">
+                <img src="assets/Sitting Picture.jpg" class="sitting" alt="Alissa Cheng smiling">
+                <div class="aboutMe__text">
+                    <h2>About Me</h2>
+                    <p>Hello, my name is <span class="aboutMe__text--name">Alissa</span>. I am a Front End Developer in Toronto. I am passionate about creating applications that are accessible and aim to improve people's lives.</p>
+                    <p>Programming requires a mix of problem solving and creativity that exhilerates my mind. Even though my favourite courses in school were math and economics, I have always been attached to the arts. In my spare time, I love to practice yoga and write fiction. Being able to find something that strikes the perfect balance between both worlds felt like coming home <span>♡</span>.</p>
+                </div>
+            </section>
+        </div>
+        <section class="projects" id="projects">
+            <h2>My Projects</h2>
+            <div class="projects__firstCard" data-aos="fade-left">
+                <div class="projects__firstCard--text">
+                    <h3><i class="fas fa-sticky-note"></i> QuickNotes</h3>
+                    <p>Save all your notes and photos in one convenient place! Create and customize a sticky notes board to your liking.</p>
+                    <ul>
+                        <li>React</li>
+                        <li>Firebase</li>
+                        <li>Javascript</li>
+                        <li>CSS3</li>
+                        <li>HTML5</li>
+                    </ul>
+                    <a href="https://alissacheng.github.io/alissaChengQuickNotes/" class="link"><i class="fas fa-link"></i> Live Link</a>
+                    <a href="https://github.com/alissacheng/alissaChengQuickNotes"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+                <img src="assets/notes.jpg" alt="QuickNotes screenshot" class="projects__firstCard--image">
+            </div>
+            <div class="projects__secondCard" data-aos="fade-right">
+                <img src="assets/hike.png" class="projects_secondCard--image">
+                <div class="projects__secondCard--text">
+                    <h3><i class="fas fa-mountain" aria-hidden="true"></i> Hike Finder</h3>
+                    <p>Generate information on nearby hike trails based on your postal code. It even gives you travel information!  A pair programming project with <span>Emma Fattori</span>. Built using the Hiking Project and Bing Maps API.</p>
+                    <ul>
+                        <li>jQuery</li>
+                        <li>Javascript</li>
+                        <li>Sass</li>
+                        <li>CSS3</li>
+                        <li>HTML5</li>
+                        <li>Rest API</li>
+                    </ul>
+                    <a href="https://hike-app-juno.github.io/hike-finder/" class="link"><i class="fas fa-link"></i> Live Link</a>
+                    <a href="https://github.com/hike-app-juno/hike-finder"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+            <div class="projects__thirdCard" data-aos="fade-left">
+                <div class="projects__thirdCard--text">
+                    <h3><i class="fas fa-headphones"></i> Paths and Podcasts</h3>
+                    <p>This application tells you whether you should bike or walk to your destination based on the podcast you choose to listen to. A mob programming project with <span>Russell Bentulan</span>, <span>Corey Derouin</span> and <span>James Sotelo</span>. Built with Mapquest and ListenNotes API. </! -->
+                    <ul>
+                        <li>React</li>
+                        <li>Javascript</li>
+                        <li>Sass</li>
+                        <li>CSS3</li>
+                        <li>HTML5</li>
+                        <li>Rest API</li>
+                    </ul>
+                    <a href="https://podcast-prioritizer.github.io/podcast-prioritizer/" class="link"><i class="fas fa-link"></i> Live Link</a>
+                    <a href="https://github.com/Podcast-Prioritizer/podcast-prioritizer"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+                <img src="assets/podcasts.jpg" alt="Paths and Podcasts screenshot" class="projects__thirdCard--image">
+            </div>
+            <div class="projects__fourthCard" data-aos="fade-right">
+                <img src="assets/phone.jpg" alt="BlackJack screenshot" class="projects__fourthCard--image">
+                <div class="projects__fourthCard--text">
+                    <h3><i class="fas fa-trophy"></i> BlackJack!</h3>
+                    <p>Grab a friend and play some BlackJack! This is two player BlackJack - with a $20 buy in. </p>
+                    <ul>
+                        <li>jQuery</li>
+                        <li>Javascript</li>
+                        <li>Sass</li>
+                        <li>CSS3</li>
+                        <li>HTML5</li>
+                    </ul>
+                    <a href="https://alissacheng.github.io/alissaChengProjectThree/" class="link"><i class="fas fa-link"></i> Live Link</a>
+                    <a href="https://github.com/alissacheng/alissaChengProjectThree"><i class="fab fa-github"></i> GitHub</a>
+                </div>
             </div>
         </section>
-    </div>
-    <section class="projects" id="projects">
-        <div class="projects__firstCard">
-            <div class="projects__firstCard--text">
-                <h3><i class="fas fa-sticky-note"></i> QuickNotes</h3>
-                <p>Save all your notes and photos in one convenient place! Create and customize a sticky notes board to your liking.</p>
-                <ul>
-                    <li>React</li>
-                    <li>Firebase</li>
-                    <li>CSS3</li>
-                    <li>HTML5</li>
+        <section class="skills" id="skills">
+            <div class="wrapper">
+                <h2>My Toolbox</h2>
+                <ul data-aos="fade-up">
+                    <li>
+                        <i class="fab fa-html5" aria-hidden="true"></i>
+                        <p>HTML5</p>
+                    </li>
+                    <li>
+                        <i class="fab fa-css3-alt" aria-hidden="true"></i>
+                        <p>CSS3</p>
+                    </li>
+                    <li>
+                        <i class="fab fa-sass" aria-hidden="true"></i>
+                        <p>Sass</p>
+                    </li>
+                    <li>
+                        <i class="fab fa-js" aria-hidden="true"></i>
+                        <p>Javascript</p>
+                    </li>
+                    <li>
+                        <i class="devicon-jquery-plain" aria-hidden="true"></i>
+                        <p>jQuery</p>
+                    </li>
+                    <li>
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <p>Github</p>
+                    </li>
+                    <li>
+                        <i class="fab fa-react" aria-hidden="true"></i>
+                        <p>React</p>
+                    </li>
+                    <li>
+                        <i class="fab fa-git-alt" aria-hidden="true"></i>
+                        <p>Git</p>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                        width="40" height="40"
+                        viewBox="0 0 226 226"
+                        style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,226v-226h226v226z" fill="none"></path><g><path d="M37.66667,174.20833l71.72675,-134.48883c1.51138,-2.83442 5.59821,-2.78263 7.03425,0.09417l24.82233,49.64467z" fill="#000080" class="firebase"></path><path d="M37.66667,174.17067l26.11242,-161.02029c0.68271,-4.21396 6.34213,-5.12737 8.31962,-1.34187l50.31796,96.4455z" fill="#000080" class="firebase"></path><path d="M37.70433,174.14242l0.94167,-0.73921l82.53237,-67.52221l-23.278,-44.61617z" fill="#ffffff" fill-opacity="0.5"></path><path d="M37.66667,174.20833l125.55242,-121.06537c2.63196,-2.53779 7.02483,-1.04054 7.56158,2.57546l17.55267,118.48992l-70.625,41.16496c-2.86738,1.61025 -6.36567,1.61025 -9.23304,0z" fill="#000080" class="firebase"></path></g></g></svg>
+                        <p>Firebase</p>
+                    </li>
+                    <li>
+                        <i class="devicon-photoshop-plain" aria-hidden="true"></i>
+                        <p>Photoshop</p>
+                    </li>
+                    <li>
+                        <i class="devicon-illustrator-plain" aria-hidden="true"></i>
+                        <p>Illustrator</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>n
+                        <p>Responsive</p>
+                    </li>
                 </ul>
-                <a href="https://alissacheng.github.io/alissaChengQuickNotes/" class="link"><i class="fas fa-link"></i> Live Link</a>
-                <a href="https://github.com/alissacheng/alissaChengQuickNotes"><i class="fab fa-github"></i> GitHub</a>
             </div>
-            <img src="assets/notes.jpg" alt="" class="projects__firstCard--image">
-        </div>
-        <div class="projects__secondCard">
-            <img src="assets/hike.png" class="projects_secondCard--image">
-            <div class="projects__secondCard--text">
-                <h3><i class="fas fa-mountain" aria-hidden="true"></i> Hike Finder</h3>
-                <p>Generate information on nearby hike trails based on your postal code. It even gives you travel information!  A pair programming project with <span>Emma Fattori</span>. Built using the Hiking Project and Bing Maps API.</p>
-                <ul>
-                    <li>jQuery</li>
-                    <li>Sass</li>
-                    <li>CSS3</li>
-                    <li>HTML5</li>
-                    <li>Rest API</li>
-                </ul>
-                <a href="https://hike-app-juno.github.io/hike-finder/" class="link"><i class="fas fa-link"></i> Live Link</a>
-                <a href="https://github.com/hike-app-juno/hike-finder"><i class="fab fa-github"></i> GitHub</a>
+        </section>
+        <section class="contact">
+            <h2>Stay In Touch</h2>
+            <div class="wrapper">
+                <div data-aos="fade-left">
+                    <p>Thanks for stopping by! If you are looking to collborate on a project or would like to chat further, please don't hesitate to reach out.</p>
+                    <aside class="social">
+                        <h3>connect with me:</h3>
+                        <ul class="social">
+                            <li>
+                                <a aria-label="Link to LinkedIn" href="https://www.linkedin.com/in/alissa-cheng-1b57b988/" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                    <p>alissa-cheng</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a aria-label="Link to GitHub" href="https://github.com/alissacheng/" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                    <p>alissacheng</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a aria-label="Link to Twitter" href="https://twitter.com/alissabcheng" target="_blank">
+                                    <i aria-hidden="true" class="fab fa-twitter"></i>
+                                    <p>alissabcheng</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+                <form action="https://formspree.io/alissabc@hotmail.com" method="post" data-aos="fade-right">
+                    <label for="name" aria-required="true" class="visuallyHidden">Name:</label>
+                    <input type="text" name="name" required placeholder="Name*">
+                    <label for="_replyto" aria-required="true" class="visuallyHidden">Email:</label>
+                    <input type="email" name="_replyto" required placeholder="Email*">
+                    <label for="message" aria-required="true" class="visuallyHidden">Message:</label>
+                    <textarea name="message" required placeholder="Message*"></textarea>
+                    <input type="submit" value="Message">
+                </form>
             </div>
-        </div>
-        <div class="projects__thirdCard">
-            <div class="projects__thirdCard--text">
-                <h3><i class="fas fa-headphones"></i> Paths and Podcasts</h3>
-                <p>This application tells you whether you should bike or walk to your destination based on the podcast you choose to listen to. A mob programming project with <span>Russell Bentulan</span>, <span>Corey Derouin</span> and <span>James Sotelo</span>. Built with Mapquest and ListenNotes API. </! -->
-                <ul>
-                    <li>React</li>
-                    <li>Sass</li>
-                    <li>CSS3</li>
-                    <li>HTML5</li>
-                    <li>Rest API</li>
-                </ul>
-                <a href="https://podcast-prioritizer.github.io/podcast-prioritizer/" class="link"><i class="fas fa-link"></i> Live Link</a>
-                <a href="https://github.com/Podcast-Prioritizer/podcast-prioritizer"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-            <img src="assets/podcasts.jpg" alt="" class="projects__thirdCard--image">
-        </div>
-        <div class="projects__fourthCard">
-            <img src="assets/phone.jpg" alt="" class="projects__fourthCard--image">
-            <div class="projects__fourthCard--text">
-                <h3><i class="fas fa-trophy"></i> BlackJack!</h3>
-                <p>Grab a friend and play some BlackJack! This is two player BlackJack - with a $20 buy in. </p>
-                <ul>
-                    <li>jQuery</li>
-                    <li>Sass</li>
-                    <li>CSS3</li>
-                    <li>HTML5</li>
-                </ul>
-                <a href="https://alissacheng.github.io/alissaChengProjectThree/" class="link"><i class="fas fa-link"></i> Live Link</a>
-                <a href="https://github.com/alissacheng/alissaChengProjectThree"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-        </div>
-    </section>
-    <section class="skills" id="skills">
-        <div class="wrapper">
-            <h2>My Toolbox</h2>
-            <ul>
-                <li>
-                    <i class="fab fa-html5" aria-hidden=""></i>
-                    <p>HTML5</p>
-                </li>
-                <li>
-                    <i class="fab fa-css3-alt" aria-hidden=""></i>
-                    <p>CSS3</p>
-                </li>
-                <li>
-                    <i class="fab fa-sass" aria-hidden=""></i>
-                    <p>Sass</p>
-                </li>
-                <li>
-                    <i class="fab fa-js" aria-hidden=""></i>
-                    <p>Javascript</p>
-                </li>
-                <li>
-                    <i class="devicon-jquery-plain" aria-hidden=""></i>
-                    <p>jQuery</p>
-                </li>
-                <li>
-                    <i class="fab fa-github" aria-hidden=""></i>
-                    <p>Github</p>
-                </li>
-                <li>
-                    <i class="fab fa-react" aria-hidden=""></i>
-                    <p>React</p>
-                </li>
-                <li>
-                    <i class="fab fa-git-alt" aria-hidden=""></i>
-                    <p>Git</p>
-                </li>
-                <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                    width="40" height="40"
-                    viewBox="0 0 226 226"
-                    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,226v-226h226v226z" fill="none"></path><g><path d="M37.66667,174.20833l71.72675,-134.48883c1.51138,-2.83442 5.59821,-2.78263 7.03425,0.09417l24.82233,49.64467z" fill="#000080" class="firebase"></path><path d="M37.66667,174.17067l26.11242,-161.02029c0.68271,-4.21396 6.34213,-5.12737 8.31962,-1.34187l50.31796,96.4455z" fill="#000080" class="firebase"></path><path d="M37.70433,174.14242l0.94167,-0.73921l82.53237,-67.52221l-23.278,-44.61617z" fill="#ffffff" fill-opacity="0.5"></path><path d="M37.66667,174.20833l125.55242,-121.06537c2.63196,-2.53779 7.02483,-1.04054 7.56158,2.57546l17.55267,118.48992l-70.625,41.16496c-2.86738,1.61025 -6.36567,1.61025 -9.23304,0z" fill="#000080" class="firebase"></path></g></g></svg>
-                    <p>Firebase</p>
-                </li>
-                <li>
-                    <i class="devicon-photoshop-plain" aria-hidden=""></i>
-                    <p>Photoshop</p>
-                </li>
-                <li>
-                    <i class="devicon-illustrator-plain" aria-hidden=""></i>
-                    <p>Illustrator</p>
-                </li>
-                <li>
-                    <i class="fas fa-mobile-alt"></i>n
-                    <p>Responsive</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="contact">
-        <h2>Connect With Me</h2>
-        <div class="wrapper">
-            <div>
-                <p>Thanks for stopping by! If you are looking to collborate on a project or would like more information about me, please don't hesitate to send a message.</p>
-                <aside class="social">
-        
-                </aside>
-            </div>
-            <form action="https://formspree.io/alissabc@hotmail.com" method="post">
-                <h3>Send a message here:</h3>
-                <label for="name">Name:</label>
-                <input type="text" name="name">
-                <label for="_replyto">Email:</label>
-                <input type="email" name="_replyto">
-                <label for="message">Message:</label>
-                <textarea name="message"></textarea>
-                <input type="submit" value="Send">
-            </form>
-        </div>
-    </section>
+        </section>
+        </main>
     <footer>
-        <p>Alissa Cheng</p>
+        <p>Designed and Coded by Alissa Cheng 2020</p>
     </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="script.js"></script>
-<!-- <script src="/path/to/parallax.js"></script> -->
 </body>
 </html>
