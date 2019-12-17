@@ -306,12 +306,11 @@ h1 {
 
 .toggle {
   width: 40px;
-  height: 4px;
-  margin: 8px 0;
+  height: 6px;
+  margin: 5px 0;
   background: white;
+  border: 1px solid navy;
   border-radius: 10px;
-  -webkit-box-shadow: 0.07em 0 navy, 0 0.07em navy, -0.07em 0 navy, 0 -0.07em navy;
-          box-shadow: 0.07em 0 navy, 0 0.07em navy, -0.07em 0 navy, 0 -0.07em navy;
 }
 
 .toggle:first-of-type {
