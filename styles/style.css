@@ -1033,7 +1033,7 @@ footer p {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  .contact .wrapper p {
+  aside p {
     display: none;
   }
   .contact a {
