@@ -1078,6 +1078,9 @@ footer p {
   .aboutMe p {
     font-size: 1.8rem;
   }
+  .projects a {
+    padding: 5px 15px;
+  }
   .link {
     margin-right: 10px;
   }
