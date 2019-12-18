@@ -13,13 +13,16 @@
     <title>Alissa Cheng</title>
 </head>
 <body>
+    <!-- Header Introduction -->
     <div class="header">
         <header>   
+            <!-- Hamburger Menu Button -->
             <button class="header__navButton" id="navButton">
                 <div class="toggle"></div>
                 <div class="toggle"></div>
                 <div class="toggle"></div>
             </button>
+            <!-- Main Nav -->
             <nav>
                 <ul class="main-nav">
                     <li>
@@ -39,9 +42,11 @@
                     </li>
                 </ul>
             </nav>
+            <!-- Website Heading -->
             <div class="header__text">
                 <h1>Hello, I'm Alissa</h1>
             </div>
+            <!-- Button to scroll to next section -->
             <div class="arrow bounce">
                 <button class="scroll">
                     <i class="fas fa-angle-down"></i>
@@ -49,9 +54,10 @@
             </div>
         </header>
         <main>
+            <!-- About Me Section -->
             <section class="aboutMe" id="aboutMe">
                 <img src="assets/profile.jpg" alt="Alissa Cheng smiling" class="profile">
-                <img src="assets/Sitting Picture.jpg" class="sitting" alt="Alissa Cheng smiling">
+                <img src="assets/sitting.jpg" class="sitting" alt="Alissa Cheng smiling">
                 <div class="aboutMe__text">
                     <h2>About Me</h2>
                     <p>Hello, my name is <span class="aboutMe__text--name">Alissa</span>. I am a Front End Developer in Toronto. I am passionate about creating applications that are accessible and aim to improve people's lives.</p>
@@ -59,8 +65,10 @@
                 </div>
             </section>
         </div>
+        <!-- Projects Section with Respective Description -->
         <section class="projects" id="projects">
             <h2>My Projects</h2>
+            <!-- First Project Card -->
             <div class="projects__firstCard" data-aos="fade-left">
                 <div class="projects__firstCard--text">
                     <h3><i class="fas fa-sticky-note"></i> QuickNotes</h3>
@@ -77,6 +85,7 @@
                 </div>
                 <img src="assets/notes.jpg" alt="QuickNotes screenshot" class="projects__firstCard--image">
             </div>
+            <!-- Second Project Card -->
             <div class="projects__secondCard" data-aos="fade-right">
                 <img src="assets/hike.png" class="projects_secondCard--image">
                 <div class="projects__secondCard--text">
@@ -94,6 +103,7 @@
                     <a href="https://github.com/hike-app-juno/hike-finder"><i class="fab fa-github"></i> GitHub</a>
                 </div>
             </div>
+            <!-- Third Project Card -->
             <div class="projects__thirdCard" data-aos="fade-left">
                 <div class="projects__thirdCard--text">
                     <h3><i class="fas fa-headphones"></i> Paths and Podcasts</h3>
@@ -111,6 +121,7 @@
                 </div>
                 <img src="assets/podcasts.jpg" alt="Paths and Podcasts screenshot" class="projects__thirdCard--image">
             </div>
+            <!-- Fourth Project Card -->
             <div class="projects__fourthCard" data-aos="fade-right">
                 <img src="assets/phone.jpg" alt="BlackJack screenshot" class="projects__fourthCard--image">
                 <div class="projects__fourthCard--text">
@@ -128,9 +139,11 @@
                 </div>
             </div>
         </section>
+        <!-- Skills Section -->
         <section class="skills" id="skills">
             <div class="wrapper">
                 <h2>My Toolbox</h2>
+                <!-- List of My Skills with Icons -->
                 <ul data-aos="fade-up">
                     <li>
                         <i class="fab fa-html5" aria-hidden="true"></i>
@@ -186,26 +199,38 @@
                 </ul>
             </div>
         </section>
+        <!-- Contact Me Section -->
         <section class="contact">
             <h2>Stay In Touch</h2>
             <div class="wrapper">
                 <div data-aos="fade-left">
                     <p>Thanks for stopping by! If you are looking to collborate on a project or would like to chat further, please don't hesitate to reach out.</p>
+                    <!-- Social Icons Aside -->
                     <aside class="social">
                         <h3>connect with me:</h3>
                         <ul class="social">
+                            <!-- Email -->
+                            <li>
+                                <a aria-label="Link to Email" href="mailto:alissabc@hotmail.com" target="_top">
+                                    <i class="fas fa-envelope"></i>
+                                    <p>alissabc</p>
+                                </a>
+                            </li>
+                            <!-- LinkedIn -->
                             <li>
                                 <a aria-label="Link to LinkedIn" href="https://www.linkedin.com/in/alissa-cheng-1b57b988/" target="_blank">
                                     <i class="fab fa-linkedin"></i>
                                     <p>alissa-cheng</p>
                                 </a>
                             </li>
+                            <!-- GitHub -->
                             <li>
                                 <a aria-label="Link to GitHub" href="https://github.com/alissacheng/" target="_blank">
                                     <i class="fab fa-github"></i>
                                     <p>alissacheng</p>
                                 </a>
                             </li>
+                            <!-- Twittter -->
                             <li>
                                 <a aria-label="Link to Twitter" href="https://twitter.com/alissabcheng" target="_blank">
                                     <i aria-hidden="true" class="fab fa-twitter"></i>
@@ -215,6 +240,7 @@
                         </ul>
                     </aside>
                 </div>
+                <!-- Send Direct Message Form -->
                 <form action="https://formspree.io/alissabc@hotmail.com" method="post" data-aos="fade-right">
                     <label for="name" aria-required="true" class="visuallyHidden">Name:</label>
                     <input type="text" name="name" required placeholder="Name*">

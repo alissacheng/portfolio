@@ -275,7 +275,7 @@ p {
   position: relative;
   background-position: top;
   overflow: hidden;
-  background-image: url(../assets/nacho-unsplash-crop.jpg);
+  background-image: url(../assets/nachoUnsplash.jpg);
 }
 
 .header header {
@@ -348,7 +348,7 @@ h1 {
           flex-direction: column;
   display: none;
   padding: 0;
-  background: rgba(4, 26, 39, 0.5);
+  background: rgba(4, 26, 39, 0.9);
   height: 100vh;
   margin: 0;
   z-index: 15;
@@ -580,6 +580,10 @@ button i {
   margin-top: 19px;
 }
 
+.projects a i {
+  font-size: 2rem;
+}
+
 .projects a:hover, .projects a:focus {
   background: navy;
   color: #fdd3d9;
@@ -594,12 +598,16 @@ button i {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .projects ul li {
-  display: inline-block;
   padding: 5px 15px;
-  border: 1px solid darkgray;
+  border-right: 1px solid darkgray;
   color: #E70D4B;
   font-size: 1.75rem;
   font-family: "Arial", sans-serif;
@@ -620,6 +628,10 @@ button i {
   border-bottom: 5px solid rgba(233, 58, 81, 0.8);
 }
 
+.projects li:last-of-type {
+  border-right: none;
+}
+
 .projects__firstCard {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -631,8 +643,10 @@ button i {
   margin-left: 25px;
 }
 
-.projects__firstCard li {
-  margin-left: 15px;
+.projects__firstCard ul {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .projects__fourthCard {
@@ -649,10 +663,6 @@ button i {
   margin-right: 15px;
 }
 
-.projects__fourthCard li {
-  margin-right: 15px;
-}
-
 .projects__thirdCard {
   text-align: right;
 }
@@ -661,15 +671,13 @@ button i {
   margin-left: 15px;
 }
 
-.projects__thirdCard li {
-  margin-left: 15px;
+.projects__thirdCard ul {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .projects__secondCard img {
-  margin-right: 15px;
-}
-
-.projects__secondCard li {
   margin-right: 15px;
 }
 
@@ -790,11 +798,13 @@ button i {
   font-size: 4.5rem;
   border-bottom: 5px solid rgba(233, 58, 81, 0.8);
   margin-top: 0;
+  margin-bottom: 50px;
 }
 
-.contact p,
-.contact label {
+.contact p {
   font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 .contact .wrapper {
@@ -856,11 +866,16 @@ button i {
   color: #e93a51;
 }
 
-h3 {
+.contact .fa-envelope {
+  font-size: 2.75rem;
+}
+
+.contact h3 {
   font-family: "Abril Fatface", cursive;
   color: #41355a;
   display: inline-block;
   font-size: 3rem;
+  margin-bottom: 15px;
 }
 
 form {
@@ -909,6 +924,12 @@ form input[type=submit]:hover, form input[type=submit]:focus {
   color: #e0c7cd;
 }
 
+input[type=text],
+input[type=email],
+textarea {
+  margin-bottom: 10px;
+}
+
 textarea {
   resize: none;
   height: 50%;
@@ -944,43 +965,49 @@ footer p {
   .projects {
     width: 90%;
   }
+  .projects > div {
+    padding-top: 25px;
+  }
   .projects > div > div {
     width: 100%;
     text-align: left;
   }
+  .projects h2 {
+    margin-top: 25px;
+    margin-bottom: 55px;
+  }
   .projects__firstCard,
   .projects__thirdCard {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: left;
-  }
-  .projects__firstCard--image,
-  .projects__thirdCard--image {
-    margin-top: 50px;
-    width: 400px;
-  }
-  .projects__firstCard li:first-of-type,
-  .projects__thirdCard li:first-of-type {
-    margin-left: 0;
-  }
-  .projects__firstCard li,
-  .projects__thirdCard li {
-    margin-right: 15px;
-    margin-left: 0;
-  }
-  .projects__secondCard,
-  .projects__fourthCard {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    text-align: left;
+  }
+  .projects__firstCard img,
+  .projects__thirdCard img {
+    margin-top: 25px;
+    width: 400px;
+    margin-bottom: 25px;
+  }
+  .projects__firstCard ul,
+  .projects__thirdCard ul {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .projects__secondCard,
+  .projects__fourthCard {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .projects__secondCard img,
   .projects__fourthCard img {
-    margin-top: 50px;
+    margin-top: 25px;
     width: 400px;
+    margin-bottom: 25px;
   }
   .projects__fourthCard img {
     width: 500px;
@@ -1002,9 +1029,17 @@ footer p {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .contact .wrapper p {
+    display: none;
+  }
+  .contact a {
+    width: 100%;
   }
   h3 {
     margin-top: 10px;
@@ -1076,14 +1111,9 @@ footer p {
   .skills .wrapper ul {
     height: 480px;
   }
-  .contact a {
-    width: 100%;
-  }
-  .contact a p {
-    display: none;
-  }
   .contact h2 {
     font-size: 3.75rem;
+    margin-left: 5%;
   }
   .contact h3 {
     display: block;
@@ -1091,12 +1121,5 @@ footer p {
   }
   .contact .wrapper {
     width: 90%;
-  }
-  .contact .wrapper ul {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
   }
 }

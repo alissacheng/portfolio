@@ -1,5 +1,6 @@
 @import 'setup';
 
+//GENERAL STYLES
 $text-shadow-color: 1px 1px 2px rgb(22, 20, 36), 0 0 10px rgb(22, 20, 36), 0 0 5px rgb(22, 20, 36);
 
 img {
@@ -22,7 +23,7 @@ p{
     font-weight: 400;
 }
 
-//HEADER//
+//HEADER
 
 .header{
     height: 190vh;
@@ -31,7 +32,7 @@ p{
     position: relative;
     background-position: top;
     overflow: hidden;
-    background-image: url(../assets/nacho-unsplash-crop.jpg);
+    background-image: url(../assets/nachoUnsplash.jpg);
 
     header{
         height: 90vh;
@@ -103,7 +104,7 @@ h1{
     flex-direction: column;
     display: none;
     padding: 0;
-    background: rgba(4, 26, 39, 0.5);
+    background: rgba(4, 26, 39, 0.9);
     height: 100vh;
     margin: 0;
     z-index: 15;
@@ -173,7 +174,7 @@ button{
     }
 }
 
-////ABOUT ME////
+//ABOUT ME
 
 //Images
 
@@ -245,7 +246,7 @@ button{
     }
 }
 
-////MOCK UP/////
+//PROJECTS SECTION
 
 .projects{
     width: 80%;
@@ -253,11 +254,11 @@ button{
     margin: 0 auto;
     padding: 75px 0;
     overflow: hidden;
-
+//Each project container
     &>div{
         display: flex;
         padding: 70px 0;
-
+//Each text container within the project
         &>div{
             width: calc(100% - 250px);
         }
@@ -266,7 +267,7 @@ button{
             align-self: center;
         }
     }
-
+//Title of each project
     h3{
         font-family: Arial, Helvetica, sans-serif;
         font-size: 2.5rem;
@@ -278,7 +279,7 @@ button{
         margin: 0;
         margin-top: 20px;
     }
-
+//Project links
     a{
         color: navy;
         text-decoration: none;
@@ -292,6 +293,10 @@ button{
         display: inline-block;
         background: rgb(253, 211, 217);
         margin-top: 19px;
+
+        i{
+            font-size: 2rem;
+        }
         
         &:hover,
         &:focus{
@@ -309,18 +314,19 @@ button{
         list-style: none;
         margin: 0;
         padding: 0;
-
+        display: flex;
+        flex-wrap: wrap;
+//Style skills list for each project
         li{
-            display: inline-block;
             padding: 5px 15px;
-            border: 1px solid darkgray;
+            border-right: 1px solid darkgray;;
             color: #E70D4B;
             font-size: 1.75rem;
             font-family: "Arial", sans-serif;
             margin-top: 15px;
         }
     }
-
+//Style each project mockup
     img{
         height: 250px;
         width: 400px;
@@ -336,6 +342,11 @@ button{
     }
 }
 
+//Hide right border because nothing to divide
+.projects li:last-of-type{
+    border-right: none;
+}
+//First Project Card
 .projects__firstCard{
     display: flex;
     text-align: right;
@@ -344,11 +355,11 @@ button{
         margin-left: 25px;
     }
 
-    li{
-        margin-left: 15px;
+    ul{
+        justify-content: flex-end;
     }
 }
-
+//Fourth Project Card
 .projects__fourthCard{
     display: flex;
 
@@ -359,13 +370,8 @@ button{
         border: 2px solid gray;
         margin-right: 15px;
     }
-
-    
-    li{
-        margin-right: 15px;
-    }
 }
-
+//Third project card
 .projects__thirdCard{
     text-align: right;
 
@@ -373,8 +379,8 @@ button{
         margin-left: 15px;
     }
 
-    li{
-        margin-left: 15px;
+    ul{
+        justify-content: flex-end;
     }
 }
 
@@ -383,17 +389,13 @@ button{
     img{
         margin-right: 15px;
     }
-
-    li{
-        margin-right: 15px;
-    }
 }
 
 .link{
     margin-right: 15px;
 }
 
-///SKILLS/////
+//SKILLS
 
 .skills {
     background: rgb(255, 232, 236);
@@ -409,7 +411,7 @@ button{
         max-width: 1200px;
         margin: 0 auto;
     }
-
+//Skills section heading
     h2{
         padding: 20px 0;
         color: #E70D4B;
@@ -418,6 +420,7 @@ button{
         margin: 30px 0;
         font-size: 4.5rem;
     }
+    //Format list of skills
     ul{
         list-style: none;
         display: flex;
@@ -468,7 +471,7 @@ button{
         transition: 0.4s;
     }
 }
-////CONTACT////
+//CONTACT
 
 .contact{
     background: lightblue;
@@ -482,10 +485,12 @@ button{
         font-size: 4.5rem;
         border-bottom: 5px solid rgba(233, 58, 81, 0.8);
         margin-top: 0;
+        margin-bottom: 50px;
     }
-    p,
-    label{
+    p{
         font-family: Arial, Helvetica, sans-serif;
+        margin-top: 0;
+        margin-bottom: 15px;
     }
 
     .wrapper{
@@ -499,7 +504,7 @@ button{
             width: 80%;
         }
     }
-
+//Social List in aside
     ul{
         list-style: none;
         display: flex;
@@ -517,7 +522,7 @@ button{
             color: black;
         }
     }
-
+//Social Icons
     i{
         color: rgb(65, 53, 90);
         transition: 0.3s;
@@ -535,12 +540,17 @@ button{
         }
     }
 }
-
-h3{
+//Make envelope icon smaller
+.contact .fa-envelope{
+    font-size: 2.75rem;
+}
+//Connect with me - heading of social icons list
+.contact h3{
     font-family: "Abril Fatface", cursive;
     color: rgb(65, 53, 90);
     display: inline-block;
     font-size: 3rem;
+    margin-bottom: 15px;
 }
 
 //Send direct message form
@@ -582,11 +592,17 @@ form{
     }
 }
 
+input[type=text],
+input[type=email],
+textarea{
+    margin-bottom: 10px;
+}
+
 textarea{
     resize: none;
     height: 50%;
 }
-
+//FOOTER
 footer p{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -595,7 +611,8 @@ footer p{
     font-weight: bold;
 }
 
-//Ipad
+//MEDIA QUERIES//
+//IPAD
 @media (max-width: 990px){
 //HEADER//
     //main nav icons
@@ -624,42 +641,50 @@ footer p{
         width: 100px;
     }
 
+    //PROJECTS
+
     .projects{
         width: 90%;
-    }
 
-    .projects > div > div{
-        width: 100%;
-        text-align: left;
+        &>div{
+            padding-top: 25px;
+
+            &>div{
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+        h2{
+            margin-top: 25px;
+            margin-bottom: 55px;
+        }
     }
 
     .projects__firstCard,
     .projects__thirdCard{
-        flex-direction: column;
+        flex-direction: column-reverse;
         text-align: left;
 
-        &--image{
-            margin-top: 50px;
+        img{
+            margin-top: 25px;
             width: 400px;
+            margin-bottom: 25px;
         }
 
-        & li:first-of-type{
-            margin-left: 0;
-        }
-
-        li{
-            margin-right: 15px;
-            margin-left: 0;
+        ul{
+            justify-content: flex-start;
         }
     }
 
     .projects__secondCard,
     .projects__fourthCard{
-        flex-direction: column-reverse;
+        flex-direction: column;
 
         img{
-            margin-top: 50px;
+            margin-top: 25px;
             width: 400px;
+            margin-bottom: 25px;
         }
     }
 
@@ -667,13 +692,13 @@ footer p{
         width: 500px;
     }
 
-    ///Skills
+    //SKILLS
 
     .skills .wrapper{
         width: 80%;
     }
 
-    //Contact
+//CONTACT
 
     .contact .wrapper{
         flex-direction: column;
@@ -684,8 +709,17 @@ footer p{
 
         ul{
             flex-direction: row;
-            justify-content: space-between;
+            align-items: center;
+            justify-content: space-around;
         }
+
+        p{
+            display: none;
+        }
+    }
+
+    .contact a{
+        width: 100%;
     }
     
     h3{
@@ -700,9 +734,9 @@ footer p{
     }
 }
 
-//mobile
+//MOBILE
 @media (max-width:600px){
-//header
+//HEADER
 
     .header{
         height: 230vh;
@@ -722,7 +756,7 @@ footer p{
         font-size: 4rem;
     }
 
-    //about me
+    //ABOUT ME
     .aboutMe{
         width: 90%;
         height: 115vh;
@@ -739,7 +773,7 @@ footer p{
             font-size: 1.8rem;
         }
     }
-
+//PROJECTS
     //Make margins smaller for live link
     .link{
         margin-right: 10px;
@@ -749,7 +783,7 @@ footer p{
     .projects h2{
         margin-top: 40px;
     }
-
+//Adjust project images
     .projects img{
         width: 315px;
         height: 175px;
@@ -769,7 +803,7 @@ footer p{
         width: 290px;
         margin-right: 0;
     }
-
+//SKILLS
     .skills .wrapper{
         width: 90%;
 
@@ -781,19 +815,13 @@ footer p{
             height: 480px;
         }
     }
-    //contact
+    //CONTACT
 
     .contact{
-        a{
-            width: 100%;
-
-            p{
-                display: none;
-            }
-        }
 
         h2{
             font-size: 3.75rem;
+            margin-left: 5%;
         }
 
         h3{
@@ -803,11 +831,6 @@ footer p{
 
         .wrapper{
             width: 90%;
-
-            ul{
-                align-items: center;
-                justify-content: space-around;
-            }
         }
     }
 }
