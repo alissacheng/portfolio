@@ -17,7 +17,7 @@
     <div class="header">
         <header>   
             <!-- Hamburger Menu Button -->
-            <button class="header__navButton" id="navButton">
+            <button class="header__navButton" id="navButton" aria-label="Open the menu">
                 <div class="toggle"></div>
                 <div class="toggle"></div>
                 <div class="toggle"></div>
@@ -87,7 +87,7 @@
             </div>
             <!-- Second Project Card -->
             <div class="projects__secondCard" data-aos="fade-right">
-                <img src="assets/hike.png" class="projects_secondCard--image">
+                <img src="assets/hike.png" class="projects_secondCard--image" alt="Hike Finder screenshot">
                 <div class="projects__secondCard--text">
                     <h3><i class="fas fa-mountain" aria-hidden="true"></i> Hike Finder</h3>
                     <p>Generate information on nearby hike trails based on your postal code. It even gives you travel information!  A pair programming project with <span>Emma Fattori</span>. Built using the Hiking Project and Bing Maps API.</p>
@@ -243,11 +243,11 @@
                 <!-- Send Direct Message Form -->
                 <form action="https://formspree.io/alissabc@hotmail.com" method="post" data-aos="fade-right">
                     <label for="name" aria-required="true" class="visuallyHidden">Name:</label>
-                    <input type="text" name="name" required placeholder="Name*">
+                    <input type="text" name="name" id="name" required placeholder="Name*">
                     <label for="_replyto" aria-required="true" class="visuallyHidden">Email:</label>
-                    <input type="email" name="_replyto" required placeholder="Email*">
+                    <input type="email" name="_replyto" id="_replyto" required placeholder="Email*">
                     <label for="message" aria-required="true" class="visuallyHidden">Message:</label>
-                    <textarea name="message" required placeholder="Message*"></textarea>
+                    <textarea name="message" id="message" required placeholder="Message*"></textarea>
                     <input type="submit" value="Message">
                 </form>
             </div>
