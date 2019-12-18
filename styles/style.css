@@ -1043,10 +1043,6 @@ footer p {
     margin-top: 10px;
     margin-bottom: 0;
   }
-  .contact h3 {
-    display: block;
-    text-align: center;
-  }
   form {
     margin-top: 25px;
     height: 400px;
@@ -1116,6 +1112,10 @@ footer p {
   .contact h2 {
     font-size: 3.75rem;
     margin-left: 5%;
+  }
+  .contact h3 {
+    display: block;
+    text-align: center;
   }
   .contact .wrapper {
     width: 90%;

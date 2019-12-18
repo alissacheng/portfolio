@@ -140,6 +140,7 @@ h1{
     }
 }
 
+
 //Bouncing arrow in header to scroll to "About Me"
 button{
     border: none;
@@ -724,11 +725,6 @@ footer p{
         margin-bottom: 0;
     }
 
-    .contact h3{
-        display: block;
-        text-align: center;
-    }
-
     form{
         margin-top: 25px;
         height: 400px;
@@ -824,6 +820,11 @@ footer p{
         h2{
             font-size: 3.75rem;
             margin-left: 5%;
+        }
+
+        h3{
+            display: block;
+            text-align: center;
         }
 
         .wrapper{
